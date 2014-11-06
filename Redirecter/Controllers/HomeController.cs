@@ -8,9 +8,6 @@ namespace Redirecter.Controllers
 {
     public class HomeController : Controller
     {
-        //
-        // GET: /Home/
-
         const string baseUrl = "http://WhereShouldIBuy.apphb.com";
         public ActionResult Index(string q = "")
         {
