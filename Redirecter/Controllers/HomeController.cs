@@ -9,6 +9,7 @@ namespace Redirecter.Controllers
     public class HomeController : Controller
     {
         const string baseUrl = "http://wheretobuy.apphb.com";
+
         public ActionResult Index(string q = "")
         {
             UriBuilder builder = new UriBuilder(baseUrl);
