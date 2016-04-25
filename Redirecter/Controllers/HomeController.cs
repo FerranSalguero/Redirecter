@@ -9,7 +9,7 @@ namespace Redirecter.Controllers
     public class HomeController : Controller
     {
 
-        const string baseUrl = "http://wheretobuy.apphb.com";
+        const string baseUrl = "http://wheretobuy.putinyourbasket.com";
 
         public ActionResult Index(string q = "")
         {
