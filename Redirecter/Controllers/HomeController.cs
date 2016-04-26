@@ -13,6 +13,8 @@ namespace Redirecter.Controllers
 
         public ActionResult Index(string q = "")
         {
+            if (string.IsNullOrEmpty(q)) return View();
+
             UriBuilder builder = new UriBuilder(baseUrl);
             if (!string.IsNullOrEmpty(q)) builder.Path = q;
 
