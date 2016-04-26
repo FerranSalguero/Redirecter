@@ -17,14 +17,7 @@ namespace Redirecter.Controllers
             UriBuilder builder = new UriBuilder(baseUrl);
             if (!string.IsNullOrEmpty(q)) builder.Path = q;
 
-            ViewBag.Url = builder.Uri.ToString();
-
-            Response.StatusCode = 301;
-            Response.RedirectLocation = builder.Uri.ToString();
-
-            //return RedirectPermanent(builder.Uri.ToString());
-
-            return View();
+            return RedirectPermanent(builder.Uri.ToString());
         }
 
     }
