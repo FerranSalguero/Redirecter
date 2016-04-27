@@ -12,10 +12,11 @@ namespace Redirecter.Controllers
         const string baseUrl = "http://wheretobuy.putinyourbasket.com";
 
         [OutputCache(Duration = 3600 * 48)]
-        public ActionResult Index(string q = "")
+        public ActionResult Index(string q = "", string country = "us")
         {
             UriBuilder builder = new UriBuilder(baseUrl);
-            if (!string.IsNullOrEmpty(q)) builder.Path = q;
+            builder.Path = country;
+            if (!string.IsNullOrEmpty(q)) builder.Path += "/" + q;
 
             return RedirectPermanent(builder.Uri.ToString());
         }

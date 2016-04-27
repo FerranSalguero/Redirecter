@@ -18,6 +18,12 @@ namespace Redirecter
                 url: "{q}",
                 defaults: new { controller = "Home", action = "Index", q = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "by_country",
+                url: "{country}/{q}",
+                defaults: new { controller = "Home", action = "Index", q = UrlParameter.Optional, country = UrlParameter.Optional }
+            );
         }
     }
 }
