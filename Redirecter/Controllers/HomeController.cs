@@ -15,8 +15,11 @@ namespace Redirecter.Controllers
         public ActionResult Index(string q = "", string country = "us")
         {
             UriBuilder builder = new UriBuilder(baseUrl);
-            builder.Path = country;
-            if (!string.IsNullOrEmpty(q)) builder.Path += "/" + q;
+
+            if (!string.IsNullOrEmpty(q))
+            {
+                builder.Path = country + "/" + q;
+            }
 
             return RedirectPermanent(builder.Uri.ToString());
         }
