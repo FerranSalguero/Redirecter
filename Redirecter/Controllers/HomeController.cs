@@ -9,9 +9,9 @@ namespace Redirecter.Controllers
     public class HomeController : Controller
     {
 
-        const string baseUrl = "https://whereshouldIbuy.apphb.com";
+        const string baseUrl = "https://whereshouldIbuyineurope.apphb.com";
 
-        [OutputCache(Duration = 3600 * 48)]
+        [OutputCache(Duration = int.MaxValue)]
         public ActionResult Index(string q = "", string country = "us")
         {
             UriBuilder builder = new UriBuilder(baseUrl);
