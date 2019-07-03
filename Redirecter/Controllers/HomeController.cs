@@ -9,7 +9,7 @@ namespace Redirecter.Controllers
     public class HomeController : Controller
     {
 
-        const string baseUrl = "https://whereshouldibuy.apphb.com";
+        const string baseUrl = "https://havetoget.com";
 
         [OutputCache(Duration = int.MaxValue)]
         public ActionResult Index(string q = "", string country = "us")
