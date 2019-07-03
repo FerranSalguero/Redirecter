@@ -8,7 +8,6 @@ namespace Redirecter.Controllers
 {
     public class HomeController : Controller
     {
-
         const string baseUrl = "https://havetoget.com";
 
         [OutputCache(Duration = int.MaxValue)]
