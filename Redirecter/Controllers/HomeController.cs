@@ -22,6 +22,5 @@ namespace Redirecter.Controllers
 
             return RedirectPermanent(builder.Uri.ToString());
         }
-
     }
 }
