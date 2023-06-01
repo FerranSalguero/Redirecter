@@ -8,7 +8,7 @@ namespace Redirecter.Controllers
 {
     public class HomeController : Controller
     {
-        const string baseUrl = "https://havetoget.com";
+        const string baseUrl = "https://wsibclassic.azurewebsites.net";
 
         [OutputCache(Duration = int.MaxValue)]
         public ActionResult Index(string q = "", string country = "us")
